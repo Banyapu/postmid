@@ -3,6 +3,7 @@ def print_even(a_list):
         cond1 = x % 2 == 0
         if cond1:
             print(x, end=" ")
+    print()
 
 
 print_even([1, 2, 3, 4, 5])
