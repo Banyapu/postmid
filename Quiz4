@@ -1,0 +1,29 @@
+def myfunc(a, b, x):
+    count = 0
+    n = 0
+    if a < b:
+        for num in range(a, b):
+            if num % x == 0:
+                count += 1
+        n = n + count
+        return n
+    if b < a:
+        for num in range(b, a):
+            if num % x == 0:
+                count += 1
+        n = n + count
+        return n
+
+
+def main():
+    a, b, x = input("Enter a, b ,x: ").split()
+    a, b, x = (int(a),int(b),int(x),)
+    n = myfunc(a, b, x)
+    mn = min(a, b)
+    mx = max(a, b)
+    msg = f"Number of integer in range [{mn}, {mx}]"
+    msg += f" and is disible by {x} => {n}"
+    print(msg)
+
+
+main()
